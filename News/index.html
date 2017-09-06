@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <style>
+      body {
+        overflow-x: hidden;
+        background-color: #EBEBEB;
+      }
+
+      #navbar{
+        height: 100px;
+      }
+      .vcenter {
+          display: inline-block;
+          vertical-align: middle;
+          float: none;
+      }
+      #menupertama{
+        background-color: #fff;
+      }
+      #menukedua .row{
+        margin-top: 25px;
+      }
+      #menutiga .navbar{
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin-top:-22px;
+      }
+      #menutiga .navbar .nav > li > a  {
+          color: black;
+      }
+
+      #menuempat{
+        margin-top:-20px;
+        height: 25px;
+      }
+      #menuempat li{
+        display: inline;
+        padding-right: 5px;
+      }
+      #menuempat li a{
+        color:black;
+      }
+      #menuempat p{
+        color:white;
+      }
+      .breakingnews{
+        background-color:#222222;
+        height: 40px;
+
+      }
+      .breakingnews h6{
+        color: white;
+      }
+      .breakingnewsright{
+        background-color: #bfbbbb;
+        height: 40px;
+      }
+
+      .formcari{
+        display: none;
+      }
+
+
+  #search {
+      position: fixed;
+      z-index: 9999;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+
+      -webkit-transition: all 0.5s ease-in-out;
+  	-moz-transition: all 0.5s ease-in-out;
+  	-o-transition: all 0.5s ease-in-out;
+  	-ms-transition: all 0.5s ease-in-out;
+  	transition: all 0.5s ease-in-out;
+
+      -webkit-transform: translate(0px, -100%) scale(0, 0);
+  	-moz-transform: translate(0px, -100%) scale(0, 0);
+  	-o-transform: translate(0px, -100%) scale(0, 0);
+  	-ms-transform: translate(0px, -100%) scale(0, 0);
+  	transform: translate(0px, -100%) scale(0, 0);
+
+      opacity: 0;
+  }
+
+  #search.open {
+      -webkit-transform: translate(0px, 0px) scale(1, 1);
+      -moz-transform: translate(0px, 0px) scale(1, 1);
+  	-o-transform: translate(0px, 0px) scale(1, 1);
+  	-ms-transform: translate(0px, 0px) scale(1, 1);
+  	transform: translate(0px, 0px) scale(1, 1);
+      opacity: 1;
+  }
+
+  #search input[type="search"] {
+      position: absolute;
+      top: 50%;
+      width: 100%;
+      color: rgb(255, 255, 255);
+      background: rgba(0, 0, 0, 0);
+      font-size: 60px;
+      font-weight: 300;
+      text-align: center;
+      border: 0px;
+      margin: 0px auto;
+      margin-top: -51px;
+      padding-left: 30px;
+      padding-right: 30px;
+      outline: none;
+  }
+  #search .btn {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-top: 61px;
+      margin-left: -45px;
+  }
+  #search .close {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      color: #fff;
+  	background-color: #428bca;
+  	border-color: #357ebd;
+  	opacity: 1;
+  	padding: 10px 17px;
+  	font-size: 27px;
+  }
+  .bigfont{
+    font-size: 40px;
+    color: white;
+  }
+.white{ background-color: #FFFFFF; }
+.card-img-overlay{padding: 0; height: 20%;}
+.card{margin-top: 10px; float: left; width:100%; height:300px;}
+.card img{
+  max-height: 200px;
+}
+
+.card-block{padding:0 10px 10px;}
+.card-text{margin: 0}
+.title-small {line-height: 23px; margin-top: 5px; font-size: 18px}
+.title-small a{
+  color: black;
+}
+.text-time em{
+  color:#2196F3;
+}
+
+.carousel-indicators {
+    bottom:-40px;
+	left:0;
+	width:100%;
+	background:#ccc;
+	padding: 6px 0px;
+	margin-left:0;
+	border-top:2px solid #fff;
+}
+.carousel-indicators li {
+	width:12px;
+	height:12px;
+	background:#fff;
+	border-color:#fff;
+
+}
+.carousel-indicators .active {
+	width:14px;
+	height:14px;
+	background:#428bca;
+	border-color:#428bca;
+}
+.carousel-inner .thumbnail {
+	margin-bottom:0;
+	border-bottom-left-radius:0;
+	border-bottom-right-radius:0;
+}
+.carousel-inner .caption {
+	background:#FFFFFF;
+	padding: 10px;
+}
+legend{
+  font-size: 22px;
+  border-bottom: 3px solid #e5e5e5;
+}
+#mainkedua{
+  background-color: #fff;
+  margin-top: 20px;
+}
+
+.copyright { min-height:40px; background-color:#000000;}
+.copyright p { text-align:left; color:#FFF; padding:10px 0; margin-bottom:0px;}
+.nohover a:focus, .nohover a:hover {
+        text-decoration: none;
+        background-color: transparent !important;
+  }
+  .nolinkstyle a{
+    text-decoration: none;
+    color: black;
+  }
+    </style>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <section id="menupertama">
+      <div class="container">
+          <div class="row">
+            <div class="col-md-7 col-xs-12">
+              <ul class="nav nav-pills">
+                <li role="presentation"><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Contact</a></li>
+                <li role="presentation"><a href="#">About</a></li>
+              </ul>
+            </div>
+            <div class="col-md-5 col-xs-12">
+              <ul class="nav nav-pills pull-right">
+                <li role="presentation"><a href="#"><span class="fa fa-google-plus"></span></a></li>
+                <li role="presentation"><a href="#"><span class="fa fa-facebook"></span></a></li>
+                <li role="presentation"><a href="#"><span class="fa fa-twitter"></span></a></li>
+              </ul>
+            </div>
+          </div>
+      </div>
+    </section>
+
+    <section id="menukedua">
+      <nav class="navbar navbar-inverse" role="navigation" id="navbar">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4 col-xs-5">
+                  <a href="#">
+                      <img src="http://placehold.it/150x50&text=Logo" alt="" class="img-responsive">
+                  </a>
+
+              </div>
+
+              <div class="col-md-8 col-xs-7">
+                <a href="#search" class="pull-right"><span class="fa fa-search bigfont col-xs-6"></span></a>
+              </div>
+            </div>
+          </div>
+          <!-- /.container -->
+    </nav>
+
+<div id="search">
+    <button type="button" class="close">×</button>
+    <form>
+        <input type="search" value="" placeholder="type keyword(s) here" />
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</div>
+    </section>
+
+    <section id="menutiga">
+      <div class="container" role="navigation">
+        <div class="row">
+          <nav class="navbar">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarmenu">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="fa fa-bars"></span>
+              </button>
+              <button class="navbar-toggle collapsed pull-left" data-toggle="collapse" data-target="#navbarmenu"><strong>Menu</strong></button>
+            </div>
+            <div id="navbarmenu" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav main_nav">
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="#">Technology</a></li>
+                <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Mobile</a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Android</a></li>
+                    <li><a href="#">Samsung</a></li>
+                    <li><a href="#">Nokia</a></li>
+                    <li><a href="#">Walton Mobile</a></li>
+                    <li><a href="#">Sympony</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Laptops</a></li>
+                <li><a href="#">Tablets</a></li>
+                <li><a href="pages/contact.html">Contact Us</a></li>
+                <li><a href="pages/404.html">404 Page</a></li>
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="menuempat">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-2 breakingnews">
+            <h6 class="text-center"> <span class="fa fa-bullhorn"></span> Breaking News </h6>
+          </div>
+          <div class="col-md-10 breakingnewsright">
+            <marquee>
+            <h6>
+            <ul>
+              <li><a href="#">Lorem ipsum dolor sit amet</a></li>
+              <li><a href="#">Nullam dictum felis eu pede mollis pretium</a></li>
+              <li><a href="#">Etiam sit amet orci eget eros faucibus tincidunt</a></li>
+            </ul>
+            </h6>
+          </marquee>
+          </div>
+        </div>
+      </div>
+    </section><br/><br /><br />
+
+
+    <section id="mainpertama">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-md-push-7">
+            <legend>Hot News</legend>
+            <div id="myCarousel" class="carousel slide">
+              <div class="carousel-inner">
+                  <div class="item active">
+                    <a href="#"><img class="thumbnail img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="Slide1"></a>
+                      <div class="caption">
+                        <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h4>
+                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                      </div>
+                  </div>
+                  <div class="item">
+                    <a href="#"><img class="thumbnail img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="Slide2"></a>
+                      <div class="caption">
+                        <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h4>
+                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                      </div>
+                   </div>
+                  <div class="item">
+                    <a href="#"><img class="thumbnail img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="Slide3"></a>
+                      <div class="caption">
+                        <h4>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</h4>
+                          <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                      </div>
+                  </div>
+              </div>
+               <!-- Indicators -->
+                <ol class="carousel-indicators">
+                  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                  <li data-target="#myCarousel" data-slide-to="1"></li>
+                  <li data-target="#myCarousel" data-slide-to="2"></li>
+                </ol>
+          </div>
+          </div>
+
+          <div class="col-md-7 col-md-pull-5">
+            <legend>Berita Terbaru</legend>
+            <div class="col-md-6 col-xs-12">
+              <div class="card white">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h2 class="title-small"><a href="#">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  </a></h2>
+                    </div>
+                    <p class="card-text"><small class="text-time"><em>3 mins ago</em></small>  <small class="pull-right"> News</small> </p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="card white">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h2 class="title-small"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </a></h2>
+                    </div>
+                    <p class="card-text"><small class="text-time"><em>3 mins ago</em></small>  <small class="pull-right"> News</small> </p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="card white">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h2 class="title-small"><a href="#"> Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien u </a></h2>
+                    </div>
+                    <p class="card-text"><small class="text-time"><em>3 mins ago</em></small>  <small class="pull-right"> News</small> </p>
+                  </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-xs-12">
+              <div class="card white">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h2 class="title-small"><a href="#">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. </a></h2>
+                    </div>
+                    <p class="card-text"><small class="text-time"><em>3 mins ago</em></small>  <small class="pull-right"> News</small> </p>
+                  </div>
+                </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section id="mainkedua">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <legend>Pilihan Editor</legend>
+            <div class="col-md-2 col-xs-4">
+              <div class="card">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h6 class="nolinkstyle"><a href="#">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  </a></h6>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-xs-4">
+              <div class="card">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h6 class="nolinkstyle"><a href="#">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  </a></h6>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-xs-4">
+              <div class="card">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h6 class="nolinkstyle"><a href="#">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  </a></h6>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-xs-4">
+              <div class="card">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h6 class="nolinkstyle"><a href="#">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  </a></h6>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-xs-4">
+              <div class="card">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h6 class="nolinkstyle"><a href="#">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  </a></h6>
+                    </div>
+                  </div>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-xs-4">
+              <div class="card">
+                <img class="img-responsive" src="http://placehold.it/700x400/dddddd/333333" alt="">
+                  <div class="card-block">
+                    <div class="news-title">
+                            <h6 class="nolinkstyle"><a href="#">Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.  </a></h6>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="copyright">
+        <div class="container">
+          <div class="col-md-6">
+            <p>© 2016 - All Rights with newsweb</p>
+          </div>
+          <div class="col-md-6">
+            <ul class="nav nav-pills pull-right nohover">
+              <li><a href="#">newsweb.com</a></li>
+              <li><a href="#">About us</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Faq's</a></li>
+              <li><a href="#">Contact us</a></li>
+              <li><a href="#">Site Map</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+
+    <script src="bootstrap/jquery-3.2.1.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        $('a[href="#search"]').on('click', function(event) {
+      event.preventDefault();
+      $('#search').addClass('open');
+      $('#search > form > input[type="search"]').focus();
+      });
+
+      $('#search, #search button.close').on('click keyup', function(event) {
+          if (event.target == this || event.target.className == 'close' || event.keyCode == 27) {
+              $(this).removeClass('open');
+          }
+      });
+
+      $('#myCarousel').carousel({
+        	interval:   4000
+    	});
+
+
+        /*
+        $('.formcari').on('mouseenter', function(event) {
+          event.preventDefault();
+          $('.formcari').removeClass('col-md-7').addClass('col-md-12');
+        });
+        $('.formcari').on('mouseleave', function(event) {
+          event.preventDefault();
+          $('.formcari').removeClass('col-md-12').addClass('col-md-7');
+        });*/
+      });
+    </script>
+  </body>
+</html>

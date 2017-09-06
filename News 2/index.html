@@ -1,0 +1,1301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+
+  <link rel="stylesheet" href="https://bootswatch.com/cosmo/bootstrap.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <style>
+    .carousel-control.left,
+    .carousel-control.right {
+      background-image: none !important;
+    }
+
+    .carousel-inner .item img {
+      width: 100%;
+      height: 100%;
+    }
+
+    .carousel-indicators {
+      bottom: 5px;
+      left: 0;
+      width: auto;
+      padding: 5px 25px 5px 25px;
+      margin-left: 0;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .carousel-indicators li {
+      border-radius: 0;
+      width: 8px;
+      height: 8px;
+      background: #fff;
+    }
+
+    .carousel-indicators .active {
+      width: 10px;
+      height: 10px;
+      background: black;
+      border-color: #39b3d7;
+    }
+
+    .carousel-control {
+      background: black;
+      color: #fff;
+      padding: 4px 0;
+      width: 26px;
+      top: auto;
+      left: auto;
+      bottom: 12px;
+      opacity: 0.85;
+    }
+
+    .carousel-control.right {
+      right: 10px;
+    }
+
+    .carousel-control.left {
+      right: 46px;
+    }
+
+    .carousel-caption {
+      top: auto;
+      width: auto;
+      right: auto;
+      bottom: 60px;
+      left: 0;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.70);
+      text-align: left;
+      height: auto;
+      max-width: 50%;
+    }
+
+    .center-cropped {
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+    }
+
+    .center-cropped img {
+      object-fit: cover;
+    }
+
+    .center-cropped-small {
+      width: 100%;
+      height: 100px;
+      overflow: hidden;
+    }
+
+    @media screen and (max-width: 990px) {
+      .center-cropped-small {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+      }
+    }
+
+    .center-cropped-small img {
+      object-fit: cover;
+    }
+
+    #header {
+      position: fixed;
+      background-color: white;
+      z-index: 999;
+    }
+
+    #header .form-horizontal {
+      padding-top: 15px;
+    }
+
+    #menunavbar {
+      margin-top: 100px;
+    }
+
+    .blackiconcolor {
+      background-color: black !important;
+    }
+
+    .navbar {
+      border-bottom: 5px solid #CC002E !important;
+    }
+
+    .navbar a {
+      color: black;
+    }
+
+    .nav {
+      margin-left: -30px;
+    }
+
+    .red-bottom-border span {
+      background-color: #CC002E;
+      padding: 4px;
+      color: white;
+    }
+
+    .red-bottom-border {
+      margin-top: -3px;
+      border-bottom: 3px solid #CC002E !important;
+    }
+
+    .black-bottom-border span {
+      background-color: black;
+      padding: 4px;
+      color: white;
+    }
+
+    .black-bottom-border {
+      margin-top: -3px;
+      border-bottom: 3px solid black !important;
+    }
+
+    .social:hover {
+      -webkit-transform: scale(1.1);
+      -moz-transform: scale(1.1);
+      -o-transform: scale(1.1);
+    }
+
+    .social {
+      -webkit-transform: scale(0.8);
+      -moz-transform: scale(0.8);
+      -o-transform: scale(0.8);
+      -webkit-transition-duration: 0.5s;
+      -moz-transition-duration: 0.5s;
+      -o-transition-duration: 0.5s;
+    }
+
+
+    .warna-fb:hover,
+    .warna-twitter:hover,
+    .warna-subscribe:hover,
+    .warna-gplus:hover {
+      color: #CC002E;
+    }
+
+    .warna-fb {
+      background-color: #3B5998;
+      color: white;
+    }
+
+    .warna-twitter {
+      background-color: #1DA1F2;
+      color: white;
+    }
+
+    .warna-subscribe {
+      background-color: #FB8D00;
+      color: white;
+    }
+
+    .warna-gplus {
+      background-color: #D43E33;
+      color: white;
+    }
+
+    .jarak-atas {
+      margin-top: 50px;
+    }
+
+    #navtab .nav {
+      margin-left: 4px;
+    }
+
+    #navtab .nav a {
+      color: #CC002E;
+    }
+
+    #navtab .nav .active a {
+      color: white;
+      background-color: #CC002E;
+    }
+
+    #navtab .nav-tabs {
+      border-bottom: 3px solid #CC002E !important;
+    }
+
+
+
+    #blacknavtab .nav {
+      margin-left: 4px;
+    }
+
+    #blacknavtab .nav a {
+      color: black;
+    }
+
+    #blacknavtab .nav .active a {
+      color: white;
+      background-color: black;
+    }
+
+    #blacknavtab .nav-tabs {
+      border-bottom: 3px solid black !important;
+    }
+
+
+
+
+
+    #pilihankiri,
+    #pilihankanan {
+      margin-top: -15px;
+      margin-bottom: 30px;
+    }
+
+    #pilihankiri {
+      background-color: #CC002E;
+      color: white;
+      height: 38px;
+    }
+
+    @media screen and (max-width: 990px) {
+      #pilihankiri {
+        height: 50px;
+      }
+      #pilihankiri {
+        margin-top: -15px;
+        text-align: center;
+      }
+      #pilihankanan {
+        margin-top: -30px;
+      }
+    }
+
+    #pilihankanan {
+      background-color: black;
+    }
+
+
+
+    #pilihan a {
+      color: white;
+      text-decoration: none;
+      padding-left: 20px;
+    }
+
+    #pilihan marquee {
+      height: 37px;
+    }
+
+    #pilihan a:hover {
+      color: #CC002E;
+    }
+
+
+    .beritakecil {
+      margin-top: 5px;
+    }
+
+    .beritakecil small {
+      color: gray;
+    }
+
+    .beritakecil a {
+      text-decoration: none;
+      color: #CC002E;
+      font-weight: bold;
+    }
+
+    .beritakecil a:hover {
+      color: black;
+    }
+
+
+    .beritakecil.bhitam a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+    }
+
+    .beritakecil.bhitam a:hover {
+      color: #CC002E;
+    }
+
+    .copyright {
+      background-color: #000000;
+    }
+
+    .copyright p {
+      text-align: left;
+      color: #FFF;
+      padding: 10px 0;
+      margin-bottom: 0;
+    }
+
+    .bottom_ul {
+      list-style-type: none;
+      float: right;
+      margin-bottom: 0;
+    }
+
+    .bottom_ul li {
+      float: left;
+      line-height: 40px;
+    }
+
+    .bottom_ul li:after {
+      content: "/";
+      color: #FFF;
+      margin-right: 8px;
+      margin-left: 8px;
+    }
+
+    .bottom_ul li a {
+      color: #FFF;
+      font-size: 12px;
+    }
+
+    @media screen and (max-width: 990px) {
+      .copyright p {
+        text-align: center;
+        color: #FFF;
+        margin-bottom: 0;
+      }
+    }
+
+    .scrollup {
+      position: fixed;
+      bottom: 50px;
+      right: 10px;
+      display: none;
+      background-color: #CC002E;
+    }
+
+    .videotitle{
+      position: absolute;
+      padding-top: 5px;
+      padding-bottom: 10px;
+      padding-right: 2px;
+      text-align: center;
+      color: white;
+      background-color: black;
+      opacity: 0.6;
+
+    }
+
+
+
+
+
+
+
+  </style>
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+
+      <section id="header">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-9 col-sm-4 col-xs-4">
+              <h1><strong>News</strong></h1>
+            </div>
+            <div class="col-md-3 col-sm-8 col-xs-8">
+              <form class="form-horizontal">
+                <fieldset>
+
+                  <div class="form-group">
+                    <div class="col-md-12">
+                      <div class="input-group">
+                        <input id="appendedtext" name="appendedtext" class="form-control" placeholder="placeholder" type="text">
+                        <span class="input-group-btn">
+                            <button type="button" name="button" class="btn btn-danger"><i class="fa fa-search"></i></button>
+                          </span>
+                      </div>
+                    </div>
+                  </div>
+
+                </fieldset>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="menunavbar">
+        <div class="col-md-12">
+          <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar blackiconcolor"></span>
+                    <span class="icon-bar blackiconcolor"></span>
+                    <span class="icon-bar blackiconcolor"></span>
+                  </button>
+                <a class="navbar-brand" href="#"></a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
+                  <li><a href="#">Link</a></li>
+                  <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">One more separated link</a></li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </section>
+
+      <section id="maincontent">
+
+        <section id="pilihan">
+          <div class="col-md-12">
+            <div class="col-md-1 col-xs-12" id="pilihankiri">
+              <h6><strong>Pilihan <span class="fa fa-bullhorn"></span></strong></h6>
+            </div>
+            <div class="col-md-11 col-xs-12" id="pilihankanan">
+              <marquee behavior="scroll" direction="right">
+                <h6><a href="#">Lorem ipsum dolor sit amet </a>
+                  <a href="#">sed diam nonumy eirmod tempor </a>
+                  <a href="#">dolore magna aliquyam erat </a>
+                  <a href="#">sed diam voluptua </a>
+                  </h6>
+              </marquee>
+            </div><br /><br />
+          </div>
+        </section>
+
+        <section id="kiricontent">
+          <div class="col-md-8">
+            <div class="col-md-12">
+              <section id="hotnews">
+                <legend class="red-bottom-border"><span>Hot News</span></legend>
+                <div id="myCarousel" class="carousel slide">
+
+                  <div class="carousel-inner">
+                    <article class="item active">
+                      <div class="center-cropped">
+                        <img src="http://placehold.it/700x400/dddddd/333333">
+                      </div>
+                      <div class="carousel-caption">
+                        <h3>Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                        <p><a class="btn btn-default btn-sm">Read More</a></p>
+                      </div>
+                    </article>
+                    <article class="item">
+                      <div class="center-cropped">
+                        <img src="http://placehold.it/700x400/dddddd/333333">
+                      </div>
+                      <div class="carousel-caption">
+                        <h3>Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                        <p><a class="btn btn-danger btn-sm">Read More</a></p>
+                      </div>
+                    </article>
+                    <article class="item">
+                      <div class="center-cropped">
+                        <img src="http://placehold.it/700x400/dddddd/333333">
+                      </div>
+                      <div class="carousel-caption">
+                        <h3>Headline</h3>
+                        <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr</p>
+                        <p><a class="btn btn-danger btn-sm">Read More</a></p>
+                      </div>
+                    </article>
+                  </div>
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                  </ol>
+                  <!-- Controls -->
+                  <div class="carousel-controls">
+                    <a class="carousel-control left" href="#myCarousel" data-slide="prev">
+                          <span class="fa fa-angle-double-left"></span>
+                        </a>
+                    <a class="carousel-control right" href="#myCarousel" data-slide="next">
+                          <span class="fa fa-angle-double-right"></span>
+                        </a>
+                  </div>
+                </div>
+              </section><br />
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <section id="terbaru">
+                <legend class="black-bottom-border"><span>Terbaru</span></legend>
+
+                <section class="beritakecil bhitam">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <a href="#">
+                        <div class="center-cropped-small">
+                          <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-7">
+                      <a href="">
+                        <p>Lorem ipsum dolor sit amet </p>
+                      </a>
+                      <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="beritakecil bhitam">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <a href="#">
+                        <div class="center-cropped-small">
+                          <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-7">
+                      <a href="">
+                        <p>Lorem ipsum dolor sit amet </p>
+                      </a>
+                      <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="beritakecil bhitam">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <a href="#">
+                        <div class="center-cropped-small">
+                          <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-7">
+                      <a href="">
+                        <p>Lorem ipsum dolor sit amet </p>
+                      </a>
+                      <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="beritakecil bhitam">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <a href="#">
+                        <div class="center-cropped-small">
+                          <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-7">
+                      <a href="">
+                        <p>Lorem ipsum dolor sit amet </p>
+                      </a>
+                      <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="beritakecil bhitam">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <a href="#">
+                        <div class="center-cropped-small">
+                          <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-7">
+                      <a href="">
+                        <p>Lorem ipsum dolor sit amet </p>
+                      </a>
+                      <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="beritakecil bhitam">
+                  <div class="row">
+                    <div class="col-md-5">
+                      <a href="#">
+                        <div class="center-cropped-small">
+                          <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-7">
+                      <a href="">
+                        <p>Lorem ipsum dolor sit amet </p>
+                      </a>
+                      <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                    </div>
+                  </div>
+                </section>
+
+
+              </section>
+            </div>
+            <div class="col-md-6 col-xs-6">
+              <legend class="black-bottom-border"><span>Techno</span></legend>
+
+              <section class="beritakecil bhitam">
+                <div class="row">
+                  <div class="col-md-5">
+                    <a href="#">
+                      <div class="center-cropped-small">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="">
+                      <p>Lorem ipsum dolor sit amet </p>
+                    </a>
+                    <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="beritakecil bhitam">
+                <div class="row">
+                  <div class="col-md-5">
+                    <a href="#">
+                      <div class="center-cropped-small">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="">
+                      <p>Lorem ipsum dolor sit amet </p>
+                    </a>
+                    <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="beritakecil bhitam">
+                <div class="row">
+                  <div class="col-md-5">
+                    <a href="#">
+                      <div class="center-cropped-small">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="">
+                      <p>Lorem ipsum dolor sit amet </p>
+                    </a>
+                    <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="beritakecil bhitam">
+                <div class="row">
+                  <div class="col-md-5">
+                    <a href="#">
+                      <div class="center-cropped-small">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="">
+                      <p>Lorem ipsum dolor sit amet </p>
+                    </a>
+                    <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="beritakecil bhitam">
+                <div class="row">
+                  <div class="col-md-5">
+                    <a href="#">
+                      <div class="center-cropped-small">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="">
+                      <p>Lorem ipsum dolor sit amet </p>
+                    </a>
+                    <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                  </div>
+                </div>
+              </section>
+
+              <section class="beritakecil bhitam">
+                <div class="row">
+                  <div class="col-md-5">
+                    <a href="#">
+                      <div class="center-cropped-small">
+                        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                      </div>
+                    </a>
+                  </div>
+                  <div class="col-md-7">
+                    <a href="">
+                      <p>Lorem ipsum dolor sit amet </p>
+                    </a>
+                    <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+
+            <section id="readmore">
+              <div class="row">
+                <button class="btn btn-danger col-md-12 col-xs-12" type="button" name="button">Readmore</button>
+              </div>
+            </section><br />
+
+            <br />
+          </div>
+        </section>
+
+        <section id="kanancontent">
+          <div class="col-md-4">
+            <section id="terhubung">
+              <div class="col-md-12">
+                <legend class="black-bottom-border"><span>Terhubung</span></legend>
+                <div class="text-center">
+                  <a href="" class="btn warna-fb btn-lg"><span class="fa fa-facebook"></span></a>
+                  <a href="" class="btn warna-twitter btn-lg"><span class="fa fa-twitter"></span></a>
+                  <a href="" class="btn warna-subscribe btn-lg"><span class="fa fa-newspaper-o"></span></a>
+                  <a href="" class="btn warna-gplus btn-lg"><span class="fa fa-google-plus"></span></a>
+                </div>
+              </div>
+            </section>
+
+
+            <section id="videopilihan">
+              <div class="col-md-12 jarak-atas">
+                <legend class="black-bottom-border"><span>Video Pilihan</span></legend>
+
+
+
+
+                <div id="videocarosel" class="carousel slide" data-ride="carousel">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#videocarosel" data-slide-to="0" class="active"></li>
+                    <li data-target="#videocarosel" data-slide-to="1"></li>
+                    <li data-target="#videocarosel" data-slide-to="2"></li>
+                  </ol>
+
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner">
+                    <div class="item active">
+                      <a href="">
+                        <h4 class="videotitle">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</h4>
+                        <img src="http://placehold.it/700x400" alt="Los Angeles">
+                      </a>
+                    </div>
+
+                    <div class="item">
+                      <a href="">
+                        <h4 class="videotitle">Lorem ipsum dolor sit amet </h4>
+                        <img src="http://placehold.it/700x400" alt="Los Angeles">
+                      </a>
+                    </div>
+
+                    <div class="item">
+                      <a href="">
+                        <h4 class="videotitle">Lorem ipsum dolor sit amet Lorem ipsum dolor </h4>
+                        <img src="http://placehold.it/700x400" alt="Los Angeles">
+                      </a>
+                    </div>
+                  </div>
+
+
+                </div>
+
+
+
+              </div>
+            </section>
+
+            <section id="blacknavtab">
+              <div class="col-md-12 jarak-atas">
+
+                <ul class="nav nav-tabs">
+                  <li class="active"><a href="#terpopular" data-toggle="tab">Terpopular</a></li>
+                  <li><a href="#terhangat" data-toggle="tab">Terhangat</a></li>
+                  <li><a href="#komentar" data-toggle="tab">Komentar</a></li>
+
+                </ul>
+                <div id="myTabContent" class="tab-content">
+                  <div class="tab-pane fade active in" id="terpopular">
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum popular sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+
+
+                  </div>
+                  <div class="tab-pane fade" id="terhangat">
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum hangat sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                  </div>
+
+                  <div class="tab-pane fade" id="komentar">
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum komentar sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+                    <section class="beritakecil">
+                      <div class="row">
+                        <div class="col-md-5">
+                          <a href="#">
+                            <div class="center-cropped-small">
+                              <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+                            </div>
+                          </a>
+                        </div>
+                        <div class="col-md-7">
+                          <a href="">
+                            <p>Lorem ipsum dolor sit amet </p>
+                          </a>
+                          <p><small>Rabu, 05 Jul 2017 07:36 WIB</small></p>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+
+                </div>
+              </div>
+            </section>
+          </div>
+        </section>
+      </section>
+
+    </div>
+  </div>
+
+  <section id="footer">
+    <div class="copyright container-fluid">
+      <div class="container">
+        <div class="col-md-6 col-sm-12">
+          <p>© 2017 - All Rights | Design By : Fadli Muharram</p>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <ul class="bottom_ul">
+            <li><a href="#">berita.com</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Faq's</a></li>
+            <li><a href="#">Contact us</a></li>
+            <li><a href="#">Site Map</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="scrolltop">
+    <button class="btn btn-danger scrollup"><span class="fa fa-angle-double-up"></span></button>
+  </section>
+
+
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 100) {
+          $('.scrollup').fadeIn();
+        } else {
+          $('.scrollup').fadeOut();
+        }
+      });
+
+      $('.scrollup').click(function() {
+        $("html, body").animate({
+          scrollTop: 0
+        }, 600);
+        return false;
+      });
+
+    });
+    $('#myCarousel').carousel({
+      interval: 4000
+    });
+  </script>
+</body>
+
+</html>

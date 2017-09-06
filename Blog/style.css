@@ -1,0 +1,210 @@
+body{
+  background: url('doodles.png');
+  background-repeat: repeat;
+}
+@media (min-width: 768px) {
+  .navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+  }
+}
+
+.navbar{
+  font-size: 15px;
+}
+
+.logofont p{
+  font-family: 'Alex Brush', cursive;
+  font-size: 80px;
+  font-style: italic;
+  color:black;
+  margin-top: 10px;
+}
+.logofontcari p{
+  font-size: 80px;
+  font-style: italic;
+  color:black;
+  margin-top: 10px;
+}
+
+.welcome p {
+ width: 100%;
+ text-align: center;
+ border-bottom: 1px solid #337cbb;
+ line-height: 0.1em;
+ margin: 10px 0 20px;
+ color:black;
+ margin-top: 100px;
+
+font-family: 'Yellowtail', cursive;
+
+}
+.welcome p span {
+    background:#fff;
+    padding:0 10px;
+}
+
+#LogoAtauKatagori{
+  margin-top: 30px;
+}
+
+.artikelwelcome p {
+ width: 100%;
+ text-align: center;
+ border-bottom: 1px solid rgb(200, 200, 200);
+ line-height: 0.1em;
+ margin-bottom: 30px;
+ color:black;
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.artikelwelcome p span {
+    background:#fff;
+    padding:0 10px;
+}
+
+#artikel{
+  margin-top: 100px;
+  background-color: white;
+}
+
+.artikelsingkat .col-md-4{
+  height: 400px;
+  -webkit-box-shadow: 0px 0px 0px 2px rgba(247,247,247,1);
+  -moz-box-shadow: 0px 0px 0px 2px rgba(247,247,247,1);
+  box-shadow: 0px 0px 0px 2px rgba(247,247,247,1);
+}
+
+#artikel .artikelsingkat .gambar{
+  max-height: 200px;
+  overflow: hidden;
+}
+#artikel .artikelsingkat .gambar img{
+  width: 100%;
+  height: auto;
+}
+
+#artikel .artikelsingkat .tag{
+  margin-top: 5px;
+}
+
+#artikel .artikelsingkat .keterangan h4{
+  text-align: center;
+}
+
+#artikel .artikelsingkat .keterangan p{
+  text-align: center;
+}
+#artikel .artikelsingkat .keterangan a{
+  text-decoration: none;
+  color:#337CBB;
+}
+
+#artikel hr{
+  border-bottom: 1px solid rgb(200, 200, 200);
+  line-height: 0.1em;
+}
+
+#footer{
+  font-size: 15px;
+  color: white;
+  background-color: black;
+}
+#footer span{
+  font-size: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-right: 10px;
+  color:#337CBB;
+}
+#footer .text-center{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#footer a{
+  text-decoration: none;
+  color:white;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus{
+  background-color: inherit !important;
+  color: #337cbb;
+}
+
+.btn-tag {
+color: #337CBB;
+background-color: #FFFFFF;
+border-color: #337CBB;
+}
+
+.btn-tag:hover,
+.btn-tag:focus,
+.btn-tag:active,
+.btn-tag.active,
+.open .dropdown-toggle.btn-tag {
+color: white;
+background-color: #337CBB;
+border-color: #337CBB;
+}
+
+.btn-tag:active,
+.btn-tag.active,
+.open .dropdown-toggle.btn-tag {
+background-image: none;
+}
+
+.btn-tag.disabled,
+.btn-tag[disabled],
+fieldset[disabled] .btn-tag,
+.btn-tag.disabled:hover,
+.btn-tag[disabled]:hover,
+fieldset[disabled] .btn-tag:hover,
+.btn-tag.disabled:focus,
+.btn-tag[disabled]:focus,
+fieldset[disabled] .btn-tag:focus,
+.btn-tag.disabled:active,
+.btn-tag[disabled]:active,
+fieldset[disabled] .btn-tag:active,
+.btn-tag.disabled.active,
+.btn-tag[disabled].active,
+fieldset[disabled] .btn-tag.active {
+background-color: #FFFFFF;
+border-color: #337CBB;
+}
+
+.btn-tag .badge {
+color: #FFFFFF;
+background-color: #337CBB;
+}
+
+#about{
+  background-color: white;
+  height: 500px;
+}
+
+#AboutLogoAtauKatagori{
+  margin-top: 60px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+#AboutLogoAtauKatagori span{
+  font-size: 80px;
+  font-style: italic;
+  color: black;
+}
+
+.blurpage-bg{
+  background: url('doodles.png');
+  background-repeat: repeat;
+
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
